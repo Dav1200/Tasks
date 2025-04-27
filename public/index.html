@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Vanilla Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Task Management</h1>
+  </header>
+
+<main>
+
+
+
+<section class="container">
+  <h2>How to Use the Task Management System</h2>
+  <ul>
+    <li><strong>Create Task:</strong> Click the "Create Task" button to open the form. Fill in the details and submit to add a new task.</li>
+    <li><strong>Search by ID:</strong> Enter a task ID in the search box and click "Go" to find a specific task.</li>
+    <li><strong>Update Status:</strong> Use the "Update"button in the task table to modify the status of a task.</li>
+    <li><strong>Delete Task:</strong> Click the"Delete" button in the task table to remove a task.</li>
+  </ul>
+</section>
+
+  <section class="overlay" id="overlay">
+
+    <div class="overlay-content">
+      <h2>Create Task</h2>
+      <form id="taskForm" class="form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <br>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+          <option value="pending">Pending</option>
+          <option value="in-progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+        <br>
+        <label for="duedate">Due date</label>
+        <input type="date" id="duedate" name="duedate" required>
+        <br>
+        <button class="submitButton" id="submitform" type="submit">Submit</button>
+
+        <button class="deleteButton" id="close">Close</button>
+      </form>
+    
+
+    </div>
+  </section>
+</section>
+
+
+
+
+<section>
+
+  <div id="searchContainer">
+    <input class="searchidinput" type="number" id="searchInput" placeholder="search by id">
+    <button id="searchTaskButton" type="button">Go</button>
+    <button style="float: right;" class="openCreateTask" id="createTask">Create Task</button>
+    <button id="refreshbtn" id="Refresh">Refresh</button>
+  </div>
+
+</section>
+
+
+
+
+<section>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="taskTableBody">
+
+    </tbody>
+  </table>
+
+
+
+</section>
+
+</main>
+  <script src="script.js"></script>
+  <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+
+</body>
+</html>
